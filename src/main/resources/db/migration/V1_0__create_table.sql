@@ -31,6 +31,17 @@ CREATE TABLE IF NOT EXISTS usr (
   role_name VARCHAR(255) NOT NULL,
   PRIMARY KEY (user_id)
 );
+CREATE TABLE IF NOT EXISTS tmp_usr (
+  uuid VARCHAR(255) NOT NULL,
+  user_id VARCHAR(255) NOT NULL,
+  mail VARCHAR(255) NOT NULL,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  role_name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (uuid)
+);
+
 ALTER TABLE reservable_room DROP CONSTRAINT IF EXISTS FK_f4wnx2qj0d59s9tl1q5800fw7;
 ALTER TABLE reservation DROP CONSTRAINT IF EXISTS FK_p1k4iriqd4eo1cpnv79uvni9g;
 ALTER TABLE reservation DROP CONSTRAINT IF EXISTS FK_recqnfjcp370rygd9hjjxjtg;
